@@ -17,7 +17,7 @@ module.exports = {
         path: './dist',
         library: 'ElmReact',
         libraryTarget: 'var',
-        filename: 'elm-react-browser.min.js',
+        filename: 'elm-react-browser.js',
     },
     plugin: [
         new webpack.optimize.UglifyJsPlugin()

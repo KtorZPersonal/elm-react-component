@@ -1,8 +1,8 @@
 {
   "name": "elm-react-component",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "A component-wrapper to embed Elm modules in React.js",
-  "main": "index.js",
+  "main": "dist/elm-react-commonjs.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "build-browser": "webpack --config webpack.browser.config.js -p",

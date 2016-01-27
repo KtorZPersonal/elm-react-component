@@ -1,0 +1,6 @@
+.*
+webpack.*
+examples/
+src/
+test/
+node_modules/
