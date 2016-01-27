@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+    - "5"
+
+branches:
+    only:
+        - master
+env:
+    global:
+        - PATH=$PATH:node_modules/.bin
+
+deploy:
+    provider: npm
+    api_key: $API_KEY
+    skip_cleanup: true
+
+install:
+    - npm install
+
+script:
+    - npm test
+
+after_success:
+    - npm run build-commonjs
+    - npm run build-browser
