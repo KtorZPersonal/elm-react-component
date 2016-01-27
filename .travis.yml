@@ -12,6 +12,7 @@ env:
 deploy:
     provider: npm
     api_key: $API_KEY
+    email: "matthias.benkort@gmail.com"
     skip_cleanup: true
 
 install:
