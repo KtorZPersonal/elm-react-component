@@ -4,7 +4,9 @@
   "description": "A component-wrapper to embed Elm modules in React.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register"
+    "test": "mocha --compilers js:babel-core/register",
+    "build-browser": "webpack --config webpack.browser.config.js -p",
+    "build-commonjs": "webpack --config webpack.commonjs.config.js -p"
   },
   "repository": {
     "type": "git",
