@@ -1,0 +1,44 @@
+{
+  "name": "elm-react-component",
+  "version": "0.0.1",
+  "description": "A component-wrapper to embed Elm modules in React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KtorZ/elm-react-component.git"
+  },
+  "keywords": [
+    "Elm",
+    "React",
+    "Component",
+    "Embedded",
+    "Wrapper"
+  ],
+  "author": "Matthias Benkort",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KtorZ/elm-react-component/issues"
+  },
+  "homepage": "https://github.com/KtorZ/elm-react-component#readme",
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "webpack": "^1.12.12"
+  },
+  "dependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
+  "babel": {
+    "presets": [
+        "es2015",
+        "react"
+    ]
+  }
+}
