@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 
 module.exports = {
-    entry: './index.jsx',
+    entry: './src/index.jsx',
     module: {
         loaders: [{
             test: /\.jsx?$/,
@@ -11,6 +11,7 @@ module.exports = {
     resolve: { extensions: ['', '.js', 'jsx'] },
     externals: {
         "react": true,
+        "react-dom": true
     },
     output: {
         path: './dist',

@@ -12,12 +12,33 @@
   <body>
     <div id="app"></div>
     <script type="text/babel">
-      function log(e) {
-        console.log("onOutPort:", e)
-      }
+      var App = React.createClass({
+        getInitialState() {
+          return { inPort: 0 }
+        },
+
+        log(e) {
+            console.log(`onOutPort:`, e)
+        },
+
+        render() {
+          setTimeout(() => {
+            this.setState({ inPort: Date.now() })
+          }, 50)
+
+          return (
+            <div>
+                <ElmReact
+                    name="Main"
+                    onOutPort={this.log}
+                    inPort={this.state.inPort}
+                />
+            </div>)
+        }
+      })
 
       ReactDOM.render(
-        <ElmReact name="Main" initPorts={{ inPort: 0 }} onOutPort={log}/>,
+        <App />,
         document.getElementById('app')
       );
     </script>
