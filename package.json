@@ -13,11 +13,11 @@
     "url": "git+ssh://git@github.com/KtorZ/elm-react-component.git"
   },
   "keywords": [
-    "Elm",
-    "React",
-    "Component",
-    "Embedded",
-    "Wrapper"
+    "elm",
+    "react",
+    "react-component",
+    "embedded",
+    "embed"
   ],
   "author": "Matthias Benkort",
   "license": "MIT",
@@ -25,6 +25,10 @@
     "url": "https://github.com/KtorZ/elm-react-component/issues"
   },
   "homepage": "https://github.com/KtorZ/elm-react-component#readme",
+  "dependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
   "devDependencies": {
     "babel": "^6.3.26",
     "babel-core": "^6.4.5",
@@ -33,14 +37,14 @@
     "babel-preset-react": "^6.3.13",
     "webpack": "^1.12.12"
   },
-  "dependencies": {
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+  "optionalDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.4.4"
   },
   "babel": {
     "presets": [
-        "es2015",
-        "react"
+      "es2015",
+      "react"
     ]
   }
 }
