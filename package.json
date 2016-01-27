@@ -1,6 +1,6 @@
 {
   "name": "elm-react-component",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A component-wrapper to embed Elm modules in React.js",
   "main": "dist/elm-react-commonjs.js",
   "scripts": {
