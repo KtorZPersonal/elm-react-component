@@ -16,7 +16,7 @@ module.exports = {
         path: './dist',
         library: 'ElmReact',
         libraryTarget: 'commonjs2',
-        filename: 'elm-react.commonjs.js',
+        filename: 'elm-react-commonjs.min.js',
     },
     plugin: [
         new webpack.optimize.UglifyJsPlugin()
