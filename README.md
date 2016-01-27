@@ -8,7 +8,7 @@ some part of an application using `Elm`.
 ## Installation
 
 ```
-npm install --save elm-react
+npm install --save elm-react-component
 ```
 
 ## Usage
@@ -96,6 +96,10 @@ ReactDOM.render(
     document.getElementById('app')
 )
 ```
+
+## TODO
+
+- Allow id, class and html attributes to be passed to the div container
 
 ## Change log
 
