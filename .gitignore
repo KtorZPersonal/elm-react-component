@@ -1,3 +1,5 @@
 node_modules/
 elm-stuff/
 dist/
+examples/**/*.elm.js
+examples/**/*.min.js
