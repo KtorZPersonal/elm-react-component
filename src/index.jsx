@@ -3,7 +3,9 @@ const ReactDOM = require('react-dom')
 
 module.exports = React.createClass({
     propTypes: {
-        name: React.PropTypes.string.isRequired
+        name: React.PropTypes.string.isRequired,
+        className: React.PropTypes.string,
+        id: React.PropTypes.string
     },
 
     getInitialState() {
@@ -45,6 +47,6 @@ module.exports = React.createClass({
     },
 
     render() {
-        return (<div></div>)
+        return (<div className={this.props.className} id={this.props.id}></div>)
     }
 })
