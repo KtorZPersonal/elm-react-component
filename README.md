@@ -97,10 +97,6 @@ ReactDOM.render(
 )
 ```
 
-## TODO
-
-- Allow id, class and html attributes to be passed to the div container
-
 ## Change log
 
 #### 0.2.0 (2016-01-27)
