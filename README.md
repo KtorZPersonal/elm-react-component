@@ -11,6 +11,10 @@ some part of an application using `Elm`.
 npm install --save elm-react-component
 ```
 
+## Examples
+
+- [Basic](http://KtorZ.github.io/elm-react-component/basic/)
+
 ## Usage
 
 The component is a plain `React` component which means that it can be integrated like any other
