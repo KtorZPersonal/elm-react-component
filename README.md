@@ -37,11 +37,13 @@ module.
 
 Check out the examples for more details, but basically:
 
-property      |      type      |     description
---------------|----------------|------------------------
-name          | string         | `Elm` module's name
-on[OutPort]   | function       | Subscriber / Handler for the given out port
-[inPort]      | any            | Value to be sent through the module in port
+property             |      type      |     description
+---------------------|----------------|------------------------
+name                 | string         | `Elm` module's name
+on[OutPort]          | function       | Subscriber / Handler for the given out port
+[inPort]             | any            | Value to be sent through the module in port
+<optional> id        | string         | Id to assign to the `Elm`'s div container
+<optional> className | string         | Class to assign to the `Elm`'s div container
 
 ## Example
 
@@ -107,6 +109,11 @@ ReactDOM.render(
 Any ideas ? Feel free to open an issue ! 
 
 ## Change log
+
+#### 0.3.0 (2016-02-03)
+
+- Refactor example folder (now accessible on gh-pages)
+- Allow id and className to be passed as parameters
 
 #### 0.2.0 (2016-01-27)
 
