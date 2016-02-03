@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-    - "5"
+    - "4.1"
 
 branches:
     only:
@@ -8,12 +8,19 @@ branches:
 env:
     global:
         - PATH=$PATH:node_modules/.bin
+        - GH_REPO=$(basename `git rev-parse --show-toplevel`)
+        - GH_REMOTE=$(git remote -v | head -n 1 | sed "s/.*github.com\/\([0-9a-zA-Z_-]*\)\/.*/\1/g")
 
 deploy:
     provider: npm
     api_key: $API_KEY
     email: "matthias.benkort@gmail.com"
     skip_cleanup: true
+
+before_install:
+    - git config --local user.name $GH_USER
+    - git config --local user.username $GH_USER
+    - git remote add deploy https://$GH_USER:$GH_TOKEN@github.com/$GH_REMOTE/$GH_REPO.git
 
 install:
     - npm install
@@ -24,3 +31,4 @@ script:
 after_success:
     - npm run build-commonjs
     - npm run build-browser
+    - git subtree push -P dist deploy build
