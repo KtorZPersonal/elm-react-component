@@ -28,8 +28,8 @@ component.
 ```
 
 The component requires at least one property `name` which is the name of your `Elm` module. So
-far, there's no dynamic loading; you have to include your `Elm` module and make the `Elm`
-object be available in the global scope. 
+far, there's no dynamic loading; you have to include your `Elm` module and either make the `Elm`
+object be available in the global scope or supply it as a component's property.
 
 Then, for each `out-port`, from `Elm` to `React`, you may pass as many `on[PortName]`
 properties as you need. Those properties should be functions -- or callback, triggered when a
@@ -41,13 +41,14 @@ module.
 
 Check out the examples for more details, but basically:
 
-property             |      type      |     description
----------------------|----------------|------------------------
-name                 | string         | `Elm` module's name
-on[OutPort]          | function       | Subscriber / Handler for the given out port
-[inPort]             | any            | Value to be sent through the module in port
-<optional> id        | string         | Id to assign to the `Elm`'s div container
-<optional> className | string         | Class to assign to the `Elm`'s div container
+property               |      type      |     description
+-----------------------|----------------|------------------------
+name                   | string         | `Elm` module's name
+on{OutPort}            | function       | Subscriber / Handler for the given out port
+{inPort}               | any            | Value to be sent through the module in port
+[optional] *elm*       | object         | The Elm object dependency. If not supplied, looks for a global `Elm`
+[optional] *id*        | string         | Id to assign to the `Elm`'s div container
+[optional] *className* | string         | Class to assign to the `Elm`'s div container
 
 ## Example
 
@@ -113,6 +114,10 @@ ReactDOM.render(
 Any ideas ? Feel free to open an issue ! 
 
 ## Change log
+
+#### 0.4.0 (2016-02-21)
+
+- Allow `Elm` object to be passed as a prop (where it was assumed to be globally accessible).
 
 #### 0.3.0 (2016-02-03)
 
