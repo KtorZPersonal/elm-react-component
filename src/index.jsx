@@ -4,6 +4,7 @@ const ReactDOM = require('react-dom')
 module.exports = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
+        elm: React.PropTypes.object,
         className: React.PropTypes.string,
         id: React.PropTypes.string
     },
@@ -13,6 +14,8 @@ module.exports = React.createClass({
     },
 
     componentDidMount() {
+        let Elm = typeof Elm == 'object' ? Elm : this.props.elm
+
         let ports = Object
                 .keys(this.props)
                 .filter(x => !/^(name|children|ref|id|className|key|on[A-Z])/.test(x))
