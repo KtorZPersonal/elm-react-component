@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Elm-React :: Basic</title>
+    <script src="basic.elm.js"></script>
     <script src="https://fb.me/react-0.14.6.js"></script>
     <script src="https://fb.me/react-dom-0.14.6.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <script src="https://rawgithub.com/KtorZ/elm-react-component/build/elm-react-browser.js"></script>
-    <script src="basic.elm.js"></script>
   </head>
   <body>
     <div id="app"></div>
@@ -33,6 +33,7 @@
                     id="MyElmComponent"
                     onOutPort={this.log}
                     inPort={this.state.inPort}
+                    elm={Elm}
                 />
             </div>)
         }
