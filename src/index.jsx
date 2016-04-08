@@ -14,14 +14,16 @@ module.exports = React.createClass({
     },
 
     componentDidMount() {
-        let Elm = typeof Elm == 'object' ? Elm : this.props.elm
+        let Elmy = typeof Elm === 'object' ? Elm : this.props.elm
+
+        let props = Object.keys(module.exports.propTypes).join("|")
 
         let ports = Object
                 .keys(this.props)
-                .filter(x => !/^(name|children|ref|id|className|key|on[A-Z])/.test(x))
+                .filter(x => !(new RegExp(`^(children|ref|key|on[A-Z]|${props})`)).test(x))
                 .reduce((o, x) => Object.assign(o, { [x]: this.props[x] }), {})
 
-        let app = Elm.embed(Elm[this.props.name], ReactDOM.findDOMNode(this), ports)
+        let app = Elmy.embed(Elmy[this.props.name], ReactDOM.findDOMNode(this), ports)
 
         Object
             .keys(app.ports)
