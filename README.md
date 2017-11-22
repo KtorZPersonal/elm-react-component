@@ -1,7 +1,7 @@
 (DEPRECATED) Elm-React ![travis](https://travis-ci.org/KtorZ/elm-react-component.svg?style=flat-square) ![license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
 =========
 
-> **⚠ This module has been deprecated. Have a look at [react-elm-components](https://github.com/evancz/react-elm-components instead) ! ⚠**
+> **⚠ This module has been deprecated. Have a look at [react-elm-components](https://github.com/evancz/react-elm-components) instead ! ⚠**
 
 This component allows you to easily integrate an `Elm` module into an existing `React`
 application. This can be useful to slightly refactor a legacy code base or simply to just run
